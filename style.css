@@ -232,68 +232,16 @@ button {
     padding: 30px 0;
 }
 
-.banner-section .carousel {
+.banner-image {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.banner-section .carousel-inner {
-    border-radius: 12px;
-}
-
-.banner-section .carousel-item img {
+.banner-image img {
     width: 100%;
     height: auto;
-    max-height: 500px;
-    object-fit: cover;
-}
-
-.banner-section .carousel-indicators {
-    margin-bottom: 15px;
-}
-
-.banner-section .carousel-indicators button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-}
-
-.banner-section .carousel-indicators button.active {
-    background-color: #fff;
-}
-
-.banner-section .carousel-control-prev,
-.banner-section .carousel-control-next {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.banner-section .carousel:hover .carousel-control-prev,
-.banner-section .carousel:hover .carousel-control-next {
-    opacity: 1;
-}
-
-.banner-section .carousel-control-prev {
-    left: 20px;
-}
-
-.banner-section .carousel-control-next {
-    right: 20px;
-}
-
-.banner-section .carousel-control-prev-icon,
-.banner-section .carousel-control-next-icon {
-    width: 24px;
-    height: 24px;
+    display: block;
 }
 
 /* ===== MAIN CONTENT ===== */
