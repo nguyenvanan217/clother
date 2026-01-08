@@ -227,6 +227,75 @@ button {
     font-weight: 500;
 }
 
+/* ===== BANNER SECTION ===== */
+.banner-section {
+    padding: 30px 0;
+}
+
+.banner-section .carousel {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.banner-section .carousel-inner {
+    border-radius: 12px;
+}
+
+.banner-section .carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.banner-section .carousel-indicators {
+    margin-bottom: 15px;
+}
+
+.banner-section .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+.banner-section .carousel-indicators button.active {
+    background-color: #fff;
+}
+
+.banner-section .carousel-control-prev,
+.banner-section .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.banner-section .carousel:hover .carousel-control-prev,
+.banner-section .carousel:hover .carousel-control-next {
+    opacity: 1;
+}
+
+.banner-section .carousel-control-prev {
+    left: 20px;
+}
+
+.banner-section .carousel-control-next {
+    right: 20px;
+}
+
+.banner-section .carousel-control-prev-icon,
+.banner-section .carousel-control-next-icon {
+    width: 24px;
+    height: 24px;
+}
+
 /* ===== MAIN CONTENT ===== */
 .main-content {
     padding: 30px 0 60px;
@@ -710,10 +779,11 @@ button {
 
 /* ===== FOOTER ===== */
 .footer {
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: #fff;
+    color: #333;
     padding: 50px 0 20px;
     margin-top: 60px;
+    border-top: 1px solid #e5e5e5;
 }
 
 .footer-content {
@@ -736,6 +806,7 @@ button {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 15px;
+    color: #1a1a1a;
 }
 
 .footer-title i {
@@ -743,7 +814,7 @@ button {
 }
 
 .footer-desc {
-    color: #999;
+    color: #666;
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -760,19 +831,19 @@ button {
     align-items: center;
     gap: 10px;
     font-size: 13px;
-    color: #ccc;
+    color: #555;
 }
 
 .footer-contact i {
     font-size: 14px;
-    color: #fff;
+    color: #1a1a1a;
 }
 
 .footer-heading {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #fff;
+    color: #1a1a1a;
 }
 
 .footer-links {
@@ -782,13 +853,13 @@ button {
 }
 
 .footer-links a {
-    color: #999;
+    color: #666;
     font-size: 14px;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #fff;
+    color: #1a1a1a;
 }
 
 .social-links {
@@ -800,7 +871,7 @@ button {
 .social-btn {
     width: 40px;
     height: 40px;
-    background-color: #333;
+    background-color: #f5f5f5;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -809,24 +880,24 @@ button {
 }
 
 .social-btn:hover {
-    background-color: #fff;
+    background-color: #1a1a1a;
     transform: translateY(-3px);
 }
 
 .social-btn i {
     font-size: 18px;
-    color: #fff;
+    color: #333;
 }
 
 .social-btn:hover i {
-    color: #1a1a1a;
+    color: #fff;
 }
 
 .newsletter h5 {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 12px;
-    color: #fff;
+    color: #1a1a1a;
 }
 
 .newsletter-form {
@@ -837,26 +908,26 @@ button {
 .newsletter-input {
     flex: 1;
     padding: 10px 15px;
-    border: 1px solid #333;
+    border: 1px solid #e5e5e5;
     border-radius: 4px;
-    background-color: #2a2a2a;
-    color: #fff;
+    background-color: #f8f8f8;
+    color: #333;
     font-size: 13px;
 }
 
 .newsletter-input::placeholder {
-    color: #666;
+    color: #999;
 }
 
 .newsletter-input:focus {
     outline: none;
-    border-color: #fff;
+    border-color: #1a1a1a;
 }
 
 .newsletter-btn {
     width: 45px;
     height: 45px;
-    background-color: #fff;
+    background-color: #1a1a1a;
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -865,13 +936,13 @@ button {
 }
 
 .newsletter-btn:hover {
-    background-color: #f0f0f0;
+    background-color: #333;
     transform: scale(1.05);
 }
 
 .newsletter-btn i {
     font-size: 16px;
-    color: #1a1a1a;
+    color: #fff;
 }
 
 .footer-bottom {
@@ -879,9 +950,9 @@ button {
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
-    border-top: 1px solid #333;
+    border-top: 1px solid #e5e5e5;
     font-size: 13px;
-    color: #999;
+    color: #666;
 }
 
 .footer-bottom i.bi-heart-fill {
@@ -896,7 +967,7 @@ button {
 
 .payment-methods i {
     font-size: 24px;
-    color: #666;
+    color: #999;
 }
 
 /* ===== MOBILE MENU ===== */
