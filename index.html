@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORANO - Thời trang nam nữ</title>
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span>Hotline mua hàng: <strong>0946942121</strong> (6:30 -21:30. Tất cả các ngày trong tuần)</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="#" class="top-link">Liên hệ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="#">
+                        <i class="bi bi-lightning-fill"></i>
+                        <span>TORANO</span>
+                    </a>
+                </div>
+
+                <!-- Navigation Menu -->
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="#">Sản phẩm mới</a></li>
+                        <li><a href="#">Danh mục sale</a></li>
+                        <li class="dropdown">
+                            <a href="#">
+                                Áo nam
+                                <i class="bi bi-chevron-down"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">
+                                Quần nam
+                                <i class="bi bi-chevron-down"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">
+                                Phụ kiện
+                                <i class="bi bi-chevron-down"></i>
+                            </a>
+                        </li>
+                        <li><a href="#">Hệ thống cửa hàng</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <button class="icon-btn search-btn" aria-label="Tìm kiếm">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <button class="icon-btn account-btn" aria-label="Tài khoản">
+                        <i class="bi bi-person"></i>
+                    </button>
+                    <button class="icon-btn cart-btn" aria-label="Giỏ hàng">
+                        <i class="bi bi-bag"></i>
+                        <span class="badge">0</span>
+                    </button>
+                    <button class="icon-btn notification-btn" aria-label="Thông báo">
+                        <i class="bi bi-bell"></i>
+                        <span class="badge">1</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="#">Trang chủ</a></li>
+                <li><span>Sản phẩm mới</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Left Sidebar - Filters -->
+                <aside class="filter-sidebar">
+                    <h2 class="filter-title">Bộ lọc</h2>
+                    
+                    <!-- Category Filter -->
+                    <div class="filter-section">
+                        <h3 class="filter-section-title">
+                            Danh mục sản phẩm
+                            <i class="bi bi-dash"></i>
+                        </h3>
+                        <ul class="filter-list">
+                            <li><a href="#">Sản phẩm mới</a></li>
+                            <li><a href="#">Danh mục sale</a></li>
+                            <li><a href="#">Áo nam <i class="bi bi-chevron-down"></i></a></li>
+                            <li><a href="#">Quần nam <i class="bi bi-chevron-down"></i></a></li>
+                            <li><a href="#">Phụ kiện <i class="bi bi-chevron-down"></i></a></li>
+                            <li><a href="#">Hệ thống cửa hàng</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="filter-section">
+                        <h3 class="filter-section-title">
+                            Khoảng giá
+                            <i class="bi bi-dash"></i>
+                        </h3>
+                        <div class="price-filter">
+                            <div class="price-inputs">
+                                <input type="text" class="price-input" value="0đ" readonly>
+                                <span>-</span>
+                                <input type="text" class="price-input" value="3,000,000đ" readonly>
+                            </div>
+                            <div class="price-slider">
+                                <input type="range" min="0" max="3000000" value="0" class="slider" id="minPrice">
+                                <input type="range" min="0" max="3000000" value="3000000" class="slider" id="maxPrice">
+                            </div>
+                            <div class="price-labels">
+                                <span>0đ</span>
+                                <span>3,000,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Color Filter -->
+                    <div class="filter-section">
+                        <h3 class="filter-section-title">
+                            Màu sắc
+                            <i class="bi bi-dash"></i>
+                        </h3>
+                        <div class="color-filter">
+                            <button class="color-option" style="background-color: #000;" title="Đen"></button>
+                            <button class="color-option" style="background-color: #fff; border: 1px solid #ddd;" title="Trắng"></button>
+                            <button class="color-option" style="background-color: #8B4513;" title="Nâu"></button>
+                            <button class="color-option" style="background-color: #4169E1;" title="Xanh dương"></button>
+                            <button class="color-option" style="background-color: #808080;" title="Xám"></button>
+                            <button class="color-option" style="background-color: #DC143C;" title="Đỏ"></button>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Right Content - Products -->
+                <div class="products-content">
+                    <!-- Products Header -->
+                    <div class="products-header">
+                        <div class="products-info">
+                            <h2>Sản phẩm mới</h2>
+                            <span class="product-count">126 sản phẩm</span>
+                        </div>
+                        <div class="products-sort">
+                            <select class="sort-select">
+                                <option>Sắp xếp theo</option>
+                                <option>Sản phẩm mới bật</option>
+                                <option>Giá: Thấp đến cao</option>
+                                <option>Giá: Cao đến thấp</option>
+                                <option>Tên: A-Z</option>
+                                <option>Tên: Z-A</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid">
+                        <!-- Product Item 1 -->
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="images/img1.png" alt="Áo khoác phao 3 lớp lót bông mũ rời">
+                                <div class="product-badges">
+                                    <span class="badge-new">Mới</span>
+                                    <span class="badge-sale">-20%</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="action-btn" title="Yêu thích">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="action-btn" title="Xem nhanh">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-colors">
+                                    <span class="color-dot" style="background-color: #000;"></span>
+                                    <span class="color-dot" style="background-color: #8B4513;"></span>
+                                    <span class="color-dot" style="background-color: #4169E1;"></span>
+                                    <span class="more-colors">+2 Màu sắc</span>
+                                </div>
+                                <h3 class="product-name">Áo khoác phao 3 lớp lót bông mũ rời GWCP302</h3>
+                                <div class="product-price">
+                                    <span class="price-current">1,399,000đ</span>
+                                    <span class="price-original">1,749,000đ</span>
+                                </div>
+                                <div class="product-sizes">
+                                    <span class="size-tag">+4 Kích thước</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Item 2 -->
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="images/img2.jpg" alt="Áo khoác phao 3 lớp chần bông">
+                                <div class="product-badges">
+                                    <span class="badge-new">Mới</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="action-btn" title="Yêu thích">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="action-btn" title="Xem nhanh">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-colors">
+                                    <span class="color-dot" style="background-color: #8B4513;"></span>
+                                    <span class="more-colors">+4 Màu sắc</span>
+                                </div>
+                                <h3 class="product-name">Áo khoác phao 3 lớp chần bông mũ liền GWCP303</h3>
+                                <div class="product-price">
+                                    <span class="price-current">1,399,000đ</span>
+                                </div>
+                                <div class="product-sizes">
+                                    <span class="size-tag">+4 Kích thước</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Item 3 -->
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="images/img1.png" alt="Áo khoác phao 3 lớp trơn chần bông">
+                                <div class="product-badges">
+                                    <span class="badge-new">Mới</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="action-btn" title="Yêu thích">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="action-btn" title="Xem nhanh">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-colors">
+                                    <span class="color-dot" style="background-color: #000;"></span>
+                                    <span class="more-colors">+5 Màu sắc</span>
+                                </div>
+                                <h3 class="product-name">Áo khoác phao 3 lớp trơn chần bông cổ cao GWCP302</h3>
+                                <div class="product-price">
+                                    <span class="price-current">1,399,000đ</span>
+                                </div>
+                                <div class="product-sizes">
+                                    <span class="size-tag">+4 Kích thước</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Item 4 -->
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="images/img4.png" alt="Quần jeans basic">
+                                <div class="product-badges">
+                                    <span class="badge-hot">Hot</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="action-btn" title="Yêu thích">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="action-btn" title="Xem nhanh">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-colors">
+                                    <span class="color-dot" style="background-color: #4169E1;"></span>
+                                    <span class="more-colors">+3 Màu sắc</span>
+                                </div>
+                                <h3 class="product-name">Quần jeans basic FABJ003</h3>
+                                <div class="product-price">
+                                    <span class="price-current">550,000đ</span>
+                                </div>
+                                <div class="product-sizes">
+                                    <span class="size-tag">+5 Kích thước</span>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Product Item 3 -->
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="images/img1.png" alt="Áo khoác phao 3 lớp trơn chần bông">
+                                <div class="product-badges">
+                                    <span class="badge-new">Mới</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="action-btn" title="Yêu thích">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="action-btn" title="Xem nhanh">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-colors">
+                                    <span class="color-dot" style="background-color: #000;"></span>
+                                    <span class="more-colors">+5 Màu sắc</span>
+                                </div>
+                                <h3 class="product-name">Áo khoác phao 3 lớp trơn chần bông cổ cao GWCP302</h3>
+                                <div class="product-price">
+                                    <span class="price-current">1,399,000đ</span>
+                                </div>
+                                <div class="product-sizes">
+                                    <span class="size-tag">+4 Kích thước</span>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Product Item 3 -->
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="images/img1.png" alt="Áo khoác phao 3 lớp trơn chần bông">
+                                <div class="product-badges">
+                                    <span class="badge-new">Mới</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="action-btn" title="Yêu thích">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="action-btn" title="Xem nhanh">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-colors">
+                                    <span class="color-dot" style="background-color: #000;"></span>
+                                    <span class="more-colors">+5 Màu sắc</span>
+                                </div>
+                                <h3 class="product-name">Áo khoác phao 3 lớp trơn chần bông cổ cao GWCP302</h3>
+                                <div class="product-price">
+                                    <span class="price-current">1,399,000đ</span>
+                                </div>
+                                <div class="product-sizes">
+                                    <span class="size-tag">+4 Kích thước</span>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Product Item 3 -->
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="images/img1.png" alt="Áo khoác phao 3 lớp trơn chần bông">
+                                <div class="product-badges">
+                                    <span class="badge-new">Mới</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="action-btn" title="Yêu thích">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="action-btn" title="Xem nhanh">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-colors">
+                                    <span class="color-dot" style="background-color: #000;"></span>
+                                    <span class="more-colors">+5 Màu sắc</span>
+                                </div>
+                                <h3 class="product-name">Áo khoác phao 3 lớp trơn chần bông cổ cao GWCP302</h3>
+                                <div class="product-price">
+                                    <span class="price-current">1,399,000đ</span>
+                                </div>
+                                <div class="product-sizes">
+                                    <span class="size-tag">+4 Kích thước</span>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Product Item 3 -->
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="images/img1.png" alt="Áo khoác phao 3 lớp trơn chần bông">
+                                <div class="product-badges">
+                                    <span class="badge-new">Mới</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="action-btn" title="Yêu thích">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="action-btn" title="Xem nhanh">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-colors">
+                                    <span class="color-dot" style="background-color: #000;"></span>
+                                    <span class="more-colors">+5 Màu sắc</span>
+                                </div>
+                                <h3 class="product-name">Áo khoác phao 3 lớp trơn chần bông cổ cao GWCP302</h3>
+                                <div class="product-price">
+                                    <span class="price-current">1,399,000đ</span>
+                                </div>
+                                <div class="product-sizes">
+                                    <span class="size-tag">+4 Kích thước</span>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Product Item 3 -->
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="images/img1.png" alt="Áo khoác phao 3 lớp trơn chần bông">
+                                <div class="product-badges">
+                                    <span class="badge-new">Mới</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="action-btn" title="Yêu thích">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="action-btn" title="Xem nhanh">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-colors">
+                                    <span class="color-dot" style="background-color: #000;"></span>
+                                    <span class="more-colors">+5 Màu sắc</span>
+                                </div>
+                                <h3 class="product-name">Áo khoác phao 3 lớp trơn chần bông cổ cao GWCP302</h3>
+                                <div class="product-price">
+                                    <span class="price-current">1,399,000đ</span>
+                                </div>
+                                <div class="product-sizes">
+                                    <span class="size-tag">+4 Kích thước</span>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Product Item 3 -->
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="images/img1.png" alt="Áo khoác phao 3 lớp trơn chần bông">
+                                <div class="product-badges">
+                                    <span class="badge-new">Mới</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="action-btn" title="Yêu thích">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="action-btn" title="Xem nhanh">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-colors">
+                                    <span class="color-dot" style="background-color: #000;"></span>
+                                    <span class="more-colors">+5 Màu sắc</span>
+                                </div>
+                                <h3 class="product-name">Áo khoác phao 3 lớp trơn chần bông cổ cao GWCP302</h3>
+                                <div class="product-price">
+                                    <span class="price-current">1,399,000đ</span>
+                                </div>
+                                <div class="product-sizes">
+                                    <span class="size-tag">+4 Kích thước</span>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Product Item 3 -->
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="images/img1.png" alt="Áo khoác phao 3 lớp trơn chần bông">
+                                <div class="product-badges">
+                                    <span class="badge-new">Mới</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="action-btn" title="Yêu thích">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="action-btn" title="Xem nhanh">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-colors">
+                                    <span class="color-dot" style="background-color: #000;"></span>
+                                    <span class="more-colors">+5 Màu sắc</span>
+                                </div>
+                                <h3 class="product-name">Áo khoác phao 3 lớp trơn chần bông cổ cao GWCP302</h3>
+                                <div class="product-price">
+                                    <span class="price-current">1,399,000đ</span>
+                                </div>
+                                <div class="product-sizes">
+                                    <span class="size-tag">+4 Kích thước</span>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Product Item 3 -->
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="images/img1.png" alt="Áo khoác phao 3 lớp trơn chần bông">
+                                <div class="product-badges">
+                                    <span class="badge-new">Mới</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="action-btn" title="Yêu thích">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="action-btn" title="Xem nhanh">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-colors">
+                                    <span class="color-dot" style="background-color: #000;"></span>
+                                    <span class="more-colors">+5 Màu sắc</span>
+                                </div>
+                                <h3 class="product-name">Áo khoác phao 3 lớp trơn chần bông cổ cao GWCP302</h3>
+                                <div class="product-price">
+                                    <span class="price-current">1,399,000đ</span>
+                                </div>
+                                <div class="product-sizes">
+                                    <span class="size-tag">+4 Kích thước</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="page-btn" disabled>
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <span class="page-dots">...</span>
+                        <button class="page-btn">10</button>
+                        <button class="page-btn">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <h3 class="footer-title">
+                        <i class="bi bi-lightning-fill"></i>
+                        TORANO
+                    </h3>
+                    <p class="footer-desc">Thời trang nam nữ cao cấp, phong cách hiện đại và năng động.</p>
+                    <div class="footer-contact">
+                        <p><i class="bi bi-telephone-fill"></i> Hotline: <strong>0946942121</strong></p>
+                        <p><i class="bi bi-envelope-fill"></i> Email: contact@torano.vn</p>
+                        <p><i class="bi bi-geo-alt-fill"></i> Địa chỉ: Hà Nội, Việt Nam</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Liên kết nhanh</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Sản phẩm mới</a></li>
+                        <li><a href="#">Danh mục sale</a></li>
+                        <li><a href="#">Hệ thống cửa hàng</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Service -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Chăm sóc khách hàng</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Phương thức thanh toán</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Kết nối với chúng tôi</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-btn" title="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="social-btn" title="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="social-btn" title="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="#" class="social-btn" title="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                    </div>
+                    <div class="newsletter">
+                        <h5>Đăng ký nhận tin</h5>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Email của bạn" class="newsletter-input">
+                            <button class="newsletter-btn">
+                                <i class="bi bi-send-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 TORANO. All rights reserved. Made with <i class="bi bi-heart-fill"></i> in Vietnam</p>
+                <div class="payment-methods">
+                    <i class="bi bi-credit-card-fill"></i>
+                    <i class="bi bi-wallet2"></i>
+                    <i class="bi bi-cash"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <h3>Menu</h3>
+                <button class="mobile-menu-close" id="mobileMenuClose">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="#">Sản phẩm mới</a></li>
+                    <li><a href="#">Danh mục sale</a></li>
+                    <li><a href="#">Áo nam</a></li>
+                    <li><a href="#">Quần nam</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                    <li><a href="#">Hệ thống cửa hàng</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
